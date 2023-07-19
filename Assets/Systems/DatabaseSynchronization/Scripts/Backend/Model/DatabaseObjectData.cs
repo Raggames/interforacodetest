@@ -1,9 +1,11 @@
 ﻿
 
+using System;
 using System.Collections.Generic;
 
 namespace Atomix.Backend.Models
 {
+    [Serializable]
     public class DatabaseObjectData : IBackendData
     {
         /// <summary>

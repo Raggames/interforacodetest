@@ -428,9 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57fa15636fdae2f48ba95e1595ad71ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pf_SomeObject1: {fileID: 648140686137645674, guid: fd750cc24bd050049834c34636f10134, type: 3}
-  pf_SomeObject2: {fileID: 361965910103393608, guid: 3926d1c84f4b26246ae46cbd8d3e9116, type: 3}
-  pf_SomeObject3: {fileID: 1061746507050188087, guid: 06c0f9f732a3ead46825fe08c4999c42, type: 3}
+  pf_SomeObject1: {fileID: 4415179030236362169, guid: fd750cc24bd050049834c34636f10134, type: 3}
+  pf_SomeObject2: {fileID: 1851974759552240000, guid: 3926d1c84f4b26246ae46cbd8d3e9116, type: 3}
+  pf_SomeObject3: {fileID: 3366393697789306688, guid: 06c0f9f732a3ead46825fe08c4999c42, type: 3}
 --- !u!4 &1468337464
 Transform:
   m_ObjectHideFlags: 0

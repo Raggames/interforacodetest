@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -27,17 +28,17 @@ namespace Atomix.Backend
             //StartCoroutine(GetRequest("LoadAll", null, onDoneCallback, onFailedCallback));
         }
 
-        protected virtual void CommitCreate(T data, Action<bool> resultCallback)
+        public virtual void CommitCreate(T data, Action<bool> resultCallback)
         {
             StartCoroutine(PostRequest("Create", JsonConvert.SerializeObject(data), resultCallback));
         }
 
-        protected virtual void CommitUpdate(T data, Action<bool> resultCallback)
+        public virtual void CommitUpdate(T data, Action<bool> resultCallback)
         {
             StartCoroutine(PostRequest("Update", JsonConvert.SerializeObject(data), resultCallback));
         }
 
-        protected virtual void CommitDelete(T data, Action<bool> resultCallback)         
+        public virtual void CommitDelete(T data, Action<bool> resultCallback)         
         {
             StartCoroutine(PostRequest("Delete", JsonConvert.SerializeObject(data), resultCallback));
         }
@@ -79,6 +80,10 @@ namespace Atomix.Backend
 
             using (UnityWebRequest www = UnityWebRequest.Post(_url, data))
             {
+
+                byte[] bodyRaw = Encoding.UTF8.GetBytes(data);
+                www.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+                www.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
                 www.SetRequestHeader("Content-Type", "application/json");
 
                 yield return www.SendWebRequest();
@@ -89,7 +94,7 @@ namespace Atomix.Backend
                 }
                 else
                 {
-                    Debug.Log("Form upload complete!");
+                    Debug.Log("Form upload complete!" + www.downloadHandler.text);
                 }
 
                 resultCallback.Invoke(www.result == UnityWebRequest.Result.Success);
