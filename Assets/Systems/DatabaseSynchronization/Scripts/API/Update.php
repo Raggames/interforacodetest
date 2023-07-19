@@ -2,6 +2,10 @@
 
 include "BackendCore.php";
 
+header("Access-Control-Allow-Headers: Authorization, Content-Type");
+header("Access-Control-Allow-Origin: *");
+header('content-type: application/json; charset=utf-8');
+
 $headers = apache_request_headers();
 
 $jsondata = file_get_contents('php://input');
