@@ -4,7 +4,7 @@ namespace Atomix.Backend
 {
     public interface IBackendData
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
 
     }
 }

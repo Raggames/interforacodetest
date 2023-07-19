@@ -9,7 +9,7 @@ namespace Atomix.Backend.Models
         /// <summary>
         /// Database primary key
         /// </summary>
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         public string Type { get; set; }
         public string Name { get; set; }
