@@ -26,6 +26,7 @@ include "BackendCore.php";
                 $dbobjectdata = (object)array(
                     "ID" => $value["ID"],
                     "Type" => $value["Type"],
+                    "Name" => $value["Name"],
                     "PositionX" => $value["PositionX"],
                     "PositionY" => $value["PositionY"],
                     "PositionZ" => $value["PositionZ"],
