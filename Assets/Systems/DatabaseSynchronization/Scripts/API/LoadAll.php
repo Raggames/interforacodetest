@@ -1,6 +1,6 @@
 <?php
 
-include "../BackendCore.php";
+include "BackendCore.php";
 
     try 
     {
@@ -9,7 +9,7 @@ include "../BackendCore.php";
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
                  
         // prepare and bind
-        $sql = "SELECT `ID`, `Type`, `Name`, `PositionX`, `PositionY`, `PositionZ`, `Data` FROM `objects_table";
+        $sql = "SELECT `ID`, `Type`, `Name`, `PositionX`, `PositionY`, `PositionZ`, `Data` FROM `objects_table`";
         $stmt = $conn->prepare($sql);
 
         $stmt->bindParam(":characterkey", $characterkey);
@@ -25,11 +25,11 @@ include "../BackendCore.php";
             {
                 $dbobjectdata = (object)array(
                     "ID" => $value["ID"],
-                    "Type" => $value["corekey"],
-                    "PositionX" => $value["characterkey"],
-                    "PositionY" => $value["xp"],
-                    "PositionZ" => $value["state"],
-                    "Data" => $value["avalaible_talent_points"],
+                    "Type" => $value["Type"],
+                    "PositionX" => $value["PositionX"],
+                    "PositionY" => $value["PositionY"],
+                    "PositionZ" => $value["PositionZ"],
+                    "Data" => $value["Data"],
                 );
     
                 $list[] = $dbobjectdata;

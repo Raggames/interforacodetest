@@ -2,7 +2,7 @@
 
 
 $servername = 'mysql.hostinger.fr';
-$dbusername = 'u645467270_atomixgames';
-$dbpassword = 'InteforaAdmin1';
+$dbusername = 'u645467270_admin';
+$dbpassword = 'gS9j3cKzbJ|';
 $dbname = 'u645467270_interfora_test';
 
