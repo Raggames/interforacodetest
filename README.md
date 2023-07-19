@@ -1,11 +1,12 @@
 # interforacodetest
- Repo for code test 
 
-Le projet : 
+
+<b> Le projet : </b>
+
 Au lancement, la position (ainsi que d'autres donnnées que je n'ai pas eu le temps d'afficher) de trois objets différents est chargée depuis la base de données. Ils sont instantiés par un manager et il est possible de les déplacer aléatoirement via un bouton GUI qui mettra aussi à jour les données du backend.
 La position des objets est donc persistente d'une session à l'autre (raffraichir la page pour tester).
 
-Résumé du déroulement :
+<b> Résumé du déroulement : </b>
 
 Création d'un game Manager qui permet de gérer le chargement et l'input utilisateur (via OnGUI) pour une simple fonction de test.
 
@@ -24,4 +25,6 @@ Après 5 minutes, les scripts PHP sont mis à jour, et tout fonctionne en build.
 
 Ce qui représente environ 2h de temps au total.
 
+<b> Remarques <b/>
 
+Je ne suis pas certain d'avoir cerné la consigne, mais je suis plutôt satisfait d'avoir quelque chose de fonctionnel en moins de deux heures !
